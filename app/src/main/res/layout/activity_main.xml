@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".main.MainActivity">
+
+        <include
+            android:id="@+id/action_bar"
+            layout="@layout/action_bar_layout" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/last_location"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:background="@drawable/br_btn_solid"
+            android:paddingStart="@dimen/dp_22"
+            android:paddingEnd="@dimen/dp_22"
+            android:text="@string/last_known_location"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/action_bar" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/used_app"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:background="@drawable/br_btn_solid"
+            android:paddingStart="@dimen/dp_22"
+            android:paddingEnd="@dimen/dp_22"
+            android:text="@string/most_recently_used_app"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/last_location" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/info_location"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:background="@drawable/br_btn_solid"
+            android:paddingStart="@dimen/dp_22"
+            android:paddingEnd="@dimen/dp_22"
+            android:text="@string/current_location"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/used_app" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/currently_running_apps"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:background="@drawable/br_btn_solid"
+            android:paddingStart="@dimen/dp_22"
+            android:paddingEnd="@dimen/dp_22"
+            android:text="@string/currently_running_apps"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_location" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/last_location_data"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_22"
+            android:paddingEnd="@dimen/dp_22"
+            android:text="@string/last_known_location"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_blue"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currently_running_apps" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listOfRunningTasks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currently_running_apps" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCurrentLocationDetails"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_max_height"
+            android:layout_margin="@dimen/card_elevation"
+            android:minHeight="@dimen/card_min_height"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/btn_blue"
+            app:cardCornerRadius="@dimen/dp_10"
+            app:cardElevation="@dimen/card_elevation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_20"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/card_elevation">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLatitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/latitude"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_22" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLongitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/longitude"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_22" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

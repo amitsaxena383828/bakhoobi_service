@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="card_elevation">8dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_22">22dp</dimen>
+    <dimen name="dp_25">25dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_22">22dp</dimen>
+    <dimen name="card_min_height">120dp</dimen>
+    <dimen name="card_max_height">160dp</dimen>
+    <dimen name="dp_200">200dp</dimen>
+
+</resources>

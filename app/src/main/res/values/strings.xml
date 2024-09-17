@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Bakhoobi Service</string>
+    <string name="on_off_location">On/Off Location</string>
+    <string name="last_known_location">Last known location</string>
+    <string name="current_location">Last known location</string>
+    <string name="currently_running_apps">Currently Running Applications</string>
+    <string name="most_recently_used_app">Most recently used app</string>
+    <string name="location_switch_not_activated">Please switch on the location.</string>
+    <string name="bakhoobi_welcome_title">Bakhoobi Welcomes You!</string>
+    <string name="bakhoobi_welcome_msf">Bakhoobi eanable you to enable the location!</string>
+    <string name="enable">Enable</string>
+    <string name="not_now">Not Now</string>
+    <string name="latitude">Latitude:</string>
+    <string name="longitude">Longitude:</string>
+
+</resources>
